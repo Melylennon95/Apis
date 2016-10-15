@@ -27,7 +27,7 @@ public class RelacionaColumnas : MonoBehaviour {
 		colIzq [slotIzq, 0] = BancoRelacionar.bancoBuenas [preguntaBuena, 0];
 		colIzq [slotIzq, 1] = "si";
 		colDer [slotDer, 0] = BancoRelacionar.bancoBuenas [preguntaBuena, 1];
-		colIzq [slotDer, 1] = "si";
+		colDer [slotDer, 1] = "si";
 
 		int preguntaMala1 = (int)Random.Range (0.0f, 5.0f);
 		int preguntaMala2 = (int)Random.Range (0.0f, 5.0f);
@@ -71,29 +71,23 @@ public class RelacionaColumnas : MonoBehaviour {
 	public void Validar() {
 		ValidarColumnaIzquierda ();
 		ValidarColumnaDerecha ();
-		bool entra = panel.activeSelf;
-		print (entra);
-		/*
-		if (entra) {
 
-		//print ("Antes del if");
-		//if (!panel.activeSelf) {
-			print ("Entro al if");
+		if (panel.activeSelf == false) {
+
 			string respIzq = "";
 			string respDer = "";
 			int i = 0;
 			while (i < 3) {
 				if (arrResp [i].GetComponent<SeleccionaRespuesta> ().clickState)
 					respIzq = colIzq [i, 1];
+					i++;
 			}
-			print ("Salio del primer while");
 			i = 3;
 			while (i < 6) {
 				if (arrResp [i].GetComponent<SeleccionaRespuesta> ().clickState)
 					respDer= colDer [i - 3, 1];
+					i++;
 			}
-
-			print ("Salio del segundo while");
 
 			if (respIzq == "si" && respDer == "si") {
 				print ("Bien");
@@ -101,8 +95,6 @@ public class RelacionaColumnas : MonoBehaviour {
 				print ("Mal");
 			}
 		}
-		*/
-
 	}
 
 	private void ValidarColumnaIzquierda() {
