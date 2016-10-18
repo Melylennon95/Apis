@@ -24,9 +24,9 @@ public class RelacionaColumnas : MonoBehaviour {
 		int slotDer = (int)Random.Range (0.0f, 2.0f);
 		int preguntaBuena = (int)Random.Range (0.0f, 2.0f);
 		//Asignar pregunta a un slot
-		colIzq [slotIzq, 0] = BancoRelacionar.bancoBuenas [preguntaBuena, 0];
+		colIzq [slotIzq, 0] = BancoPreguntas.buenasColumnas [preguntaBuena, 0];
 		colIzq [slotIzq, 1] = "si";
-		colDer [slotDer, 0] = BancoRelacionar.bancoBuenas [preguntaBuena, 1];
+		colDer [slotDer, 0] = BancoPreguntas.buenasColumnas [preguntaBuena, 1];
 		colDer [slotDer, 1] = "si";
 
 		int preguntaMala1 = (int)Random.Range (0.0f, 5.0f);
@@ -37,13 +37,13 @@ public class RelacionaColumnas : MonoBehaviour {
 		}
 
 		//Asignar primer pregunta mala al izq
-		AsignarPreguntas(colIzq, BancoRelacionar.bancoMalas [preguntaMala1, 0]);
+		AsignarPreguntas(colIzq, BancoPreguntas.malasColumnas [preguntaMala1, 0]);
 		//Asignar segunda pregunta mala al izq
-		AsignarPreguntas(colIzq, BancoRelacionar.bancoMalas [preguntaMala2, 0]);
+		AsignarPreguntas(colIzq, BancoPreguntas.malasColumnas [preguntaMala2, 0]);
 		//Asignar primer pregunta mala al der
-		AsignarPreguntas (colDer, BancoRelacionar.bancoMalas [preguntaMala1, 1]);
+		AsignarPreguntas (colDer, BancoPreguntas.malasColumnas [preguntaMala1, 1]);
 		//Asignar segunda pregunta mala al der
-		AsignarPreguntas (colDer, BancoRelacionar.bancoMalas [preguntaMala2, 1]);
+		AsignarPreguntas (colDer, BancoPreguntas.malasColumnas [preguntaMala2, 1]);
 
 		//Asignar el texto correspondiente
 		for (int j = 0; j < 3; j++) {

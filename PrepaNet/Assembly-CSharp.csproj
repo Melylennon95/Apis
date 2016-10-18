@@ -45,8 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BancoRelacionar.cs" />
+     <Compile Include="Assets\Scripts\BancoPreguntas.cs" />
      <Compile Include="Assets\Scripts\BotonPanel.cs" />
+     <Compile Include="Assets\Scripts\EligeRespuesta.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\RelacionaColumnas.cs" />
      <Compile Include="Assets\Scripts\SeleccionaRespuesta.cs" />
