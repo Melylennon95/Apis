@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/EligeRespuesta.unity
+- path: Assets/Scenes/RelacionaColumnas.unity
   isLoaded: 1
   isActive: 1
